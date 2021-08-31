@@ -1,0 +1,21 @@
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(
+    MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+        backgroundColor: Colors.white10,
+        appBar: AppBar(
+          backgroundColor: Colors.black,
+          title: Center(child: Text('Am I Poor?')),
+        ),
+        body: Center(
+          child: Image(
+            image: AssetImage('images/Poor.png'),
+          ),
+        ),
+      ),
+    ),
+  );
+}
