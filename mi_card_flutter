@@ -1,0 +1,87 @@
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(Myapp());
+}
+
+class Myapp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+        backgroundColor: Colors.white24,
+        body: SafeArea(
+            child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            CircleAvatar(
+              radius: 60,
+              backgroundImage: AssetImage('images/Ali.png'),
+            ),
+            Text(
+              'Ali Mahmoodi',
+              style: TextStyle(
+                fontFamily: 'Pacifico',
+                fontSize: 40,
+                fontWeight: FontWeight.bold,
+                color: Colors.white,
+              ),
+            ),
+            Text(
+              'CYBERSECURITY SPECIALIST',
+              style: TextStyle(
+                fontFamily: 'Source Sans Pro',
+                fontSize: 15,
+                fontWeight: FontWeight.bold,
+                color: Colors.white60,
+                letterSpacing: 2,
+              ),
+            ),
+            SizedBox(
+              height: 20,
+              width: 150,
+              child: Divider(
+                color: Colors.white70,
+              ),
+            ),
+            Card(
+              margin: EdgeInsets.symmetric(vertical: 10, horizontal: 25),
+              child: ListTile(
+                leading: Icon(
+                  Icons.phone,
+                  color: Colors.black54,
+                ),
+                title: Text(
+                  '+98 912 798 2989',
+                  style: TextStyle(
+                    fontFamily: 'Source Sans Pro',
+                    fontSize: 20,
+                    color: Colors.black54,
+                  ),
+                ),
+              ),
+            ),
+            Card(
+              margin: EdgeInsets.symmetric(vertical: 10, horizontal: 25),
+              child: ListTile(
+                leading: Icon(
+                  Icons.email,
+                  color: Colors.black54,
+                ),
+                title: Text(
+                  'Amahmoodi181188@gmail.com',
+                  style: TextStyle(
+                    fontSize: 16,
+                    color: Colors.black54,
+                    fontFamily: 'Source Sans Pro',
+                  ),
+                ),
+              ),
+            ),
+          ],
+        )),
+      ),
+    );
+  }
+}
